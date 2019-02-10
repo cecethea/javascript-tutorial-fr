@@ -1,5 +1,5 @@
 
-Essayez de le lancer:
+Essayez de lancer:
 
 ```js run
 let str = "Hello";
