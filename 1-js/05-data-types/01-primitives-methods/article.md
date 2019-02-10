@@ -94,7 +94,7 @@ alert( typeof 1 ); // "number"
 alert( typeof new Number(1) ); // "object"!
 ```
 
-Et comme ce qui suit, `zéro`, est un objet, l'alerte s'affichera:
+Et comme dans l'exemple qui suit, `zéro` est un objet, alors l'alerte s'affichera:
 ```js run
 let zero = new Number(0);
 
