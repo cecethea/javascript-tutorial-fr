@@ -46,9 +46,9 @@ La solution semble un peu gếnante, mais la voici:
 
 1. Les primitives sont toujours primitives. Une seule valeur, au choix.
 2. Le langage permet d'accéder aux méthodes et aux propriétés des chaînes, des nombres, des booléens et des symboles.
-3. Lorsque cela se produit, un "encapsuleurs d'objet" spécial est crée pour fournir la fonctionnalité supplémentaire, puis est détruit.
+3. Lorsque cela se produit, un "encapsuleur d'objet" spécial est crée pour fournir la fonctionnalité supplémentaire, puis est détruit.
 
-Les "encapsuleurs d'objet" sont différents pour chaque type de primitive et sont appelés: `String`, `Number`, `Boolean` et `Symbol`. Ainsi, ils fournissent différents ensembles de méthodes.
+Les "encapsuleur d'objet" sont différents pour chaque type de primitive et sont appelés: `String`, `Number`, `Boolean` et `Symbol`. Ainsi, ils fournissent différents ensembles de méthodes.
 
 Par exemple, il existe une méthode [str.toUpperCase()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) qui renvoie une chaînes en majuscule. 
 
