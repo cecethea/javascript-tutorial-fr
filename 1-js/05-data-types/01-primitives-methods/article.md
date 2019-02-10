@@ -7,12 +7,12 @@ ils prévoient également des méthodes pour les appeler en tant que tel. Nous �
 Examinons les principales distinctions entre primitives et objets.
 
 Une primitive
-: Est une valeur de type primitif.
-Il existe 6 types primitifs: `chaîne`, `nombre`, `booléen`, `symbole`, `null` et `undefined`.
+- Est une valeur de type primitif.
+- Il existe 6 types primitifs: `chaîne`, `nombre`, `booléen`, `symbole`, `null` et `undefined`.
 
 Un objet
-: Est capable de stocker plusieurs valeurs en tant que propriétés.
-Peut être crée avec `{}`, par exemple:`{name:"John", age: 30}`. Il existe d'autres types d'objets en JavaScript; les fonctions, par exemple, sont des objets.
+- Est capable de stocker plusieurs valeurs en tant que propriétés.
+- Peut être crée avec `{}`, par exemple:`{name:"John", age: 30}`. Il existe d'autres types d'objets en JavaScript; les fonctions, par exemple, sont des objets.
 
 Une des meilleurs choses à propos des objets est que nous pouvons stocker une fonction en tant que l'une de ses propriétés.
 
