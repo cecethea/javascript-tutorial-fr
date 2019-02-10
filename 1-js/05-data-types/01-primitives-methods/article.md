@@ -81,10 +81,10 @@ alert( n.toFixed(2) ); // 1.23
 Nous verrons des méthodes plus spécifiques dans les chapitres [Nombres](https://javascript.info/number) et [Chaînes](https://javascript.info/string).
 
 
-````warn header="Les constructeurs `String` / `Number` / `Boolean` sont réservés à un usage interne."
+````warn header="Les constructeurs `String/Number/Boolean` sont réservés à un usage interne."
 Certains langages comme Java nous permettent de créer des "encapsuleur d'objet" pour les primitives en utilisant explicitement une syntaxe telle que `new Number(1)` ou `new Boolean (false)`.
 
-En JavaScript, cela est également possible pour des raisons historique, mais hautement déconseillé. Les choses vont devenir fous à plusieurs endroits.
+En JavaScript, cela est également possible pour des raisons historique, mais hautement **déconseillé**. Les choses vont devenir fous à plusieurs endroits.
 
 Par exemple:
 
