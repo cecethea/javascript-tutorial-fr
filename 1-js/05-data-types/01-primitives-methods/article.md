@@ -1,6 +1,6 @@
 # Méthodes des primitives
 
-JavaScript nous permet de travailler avec des primitives (chaîne, nombres, etc.) comme s'il s'agissait d'objets.
+JavaScript nous permet de travailler avec des primitives (chaînes, nombres, etc.) comme s'il s'agissait d'objets.
 
 ils prévoient également des méthodes pour les appeler en tant que tel. Nous étudierons cela très bientôt, mais nous verrons d'abord comment cela fonctionne car, bien entendu, les primitives ne sont pas des objets ( et nous allons rendre cela plus clair).
 
@@ -46,9 +46,9 @@ La solution semble un peu gếnante, mais la voici:
 
 1. Les primitives sont toujours primitives. Une seule valeur, au choix.
 2. Le langage permet d'accéder aux méthodes et aux propriétés des chaînes, des nombres, des booléens et des symboles.
-3. Lorsque cela se produit, un "encapsuleur d'objet" spécial est crée pour fournir la fonctionnalité supplémentaire, puis est détruit.
+3. Lorsque cela se produit, un "wrapper(conteneur) d'objet" spécial est crée pour fournir la fonctionnalité supplémentaire, puis est détruit.
 
-Les "encapsuleur d'objet" sont différents pour chaque type de primitive et sont appelés: `String`, `Number`, `Boolean` et `Symbol`. Ainsi, ils fournissent différents ensembles de méthodes.
+Les "wrapper(conteneur) d'objet" sont différents pour chaque type de primitive et sont appelés: `String`, `Number`, `Boolean` et `Symbol`. Ainsi, ils fournissent différents ensembles de méthodes.
 
 Par exemple, il existe une méthode [str.toUpperCase()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) qui renvoie une chaînes en majuscule. 
 
@@ -82,7 +82,7 @@ Nous verrons des méthodes plus spécifiques dans les chapitres [Nombres](https:
 
 
 ````warn header="Les constructeurs `String/Number/Boolean` sont réservés à un usage interne."
-Certains langages comme Java nous permettent de créer des "encapsuleur d'objet" pour les primitives en utilisant explicitement une syntaxe telle que `new Number(1)` ou `new Boolean (false)`.
+Certains langages comme Java nous permettent de créer des "wrapper(conteneur) d'objet" pour les primitives en utilisant explicitement une syntaxe telle que `new Number(1)` ou `new Boolean (false)`.
 
 En JavaScript, cela est également possible pour des raisons historique, mais hautement **déconseillé**. Les choses vont devenir fous à plusieurs endroits.
 
@@ -112,7 +112,7 @@ let num = Number("123"); // convertir une chaîne en nombre
 
 
 ````warn header="null/undefined n'ont pas de méthode"
-Les primitives spéciales null et undefined sont des exceptions. Ils n'ont pas de "capsuleur d'objet" correspondants et ne fournissent aucune méthode. En un sens, ils sont "les plus primitifs".
+Les primitives spéciales null et undefined sont des exceptions. Ils n'ont pas de "wrapper(conteneur) d'objet" correspondants et ne fournissent aucune méthode. En un sens, ils sont "les plus primitifs".
 
 Une tentative d'accès à une propriété d'une telle valeur donnerait l'erreur suivante:
 

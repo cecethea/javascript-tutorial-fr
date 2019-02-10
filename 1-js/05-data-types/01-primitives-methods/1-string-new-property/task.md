@@ -2,7 +2,7 @@ importance: 5
 
 ---
 
-# Puis-je ajouter une chaîne comme propriété ?
+# Puis-je ajouter une propiété à une primitive ?
 
 
 Considérons le code suivant:

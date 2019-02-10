@@ -15,11 +15,11 @@ Il peut y avoir deux types de résultats:
 
 Pourquoi? Répétons ce qui se pase à la ligne`(*)`:
 
-1. Lorsqu'on accède à une propiété de `str`, un "encapsuleur d'objet" est créé.
+1. Lorsqu'on accède à une propiété de `str`, un "wrapper(conteneur) d'objet" est créé.
 2. L'opération avec la propriété est effectuée dessus. Ainsi, l'objet obtient la propriété test.
-3. L'opération se termine et "l'encapsuleur d'objet" disparait.
+3. L'opération se termine et "l'wrapper(conteneur) d'objet" disparait.
 
-Ainsi, sur la dernière ligne, `str` n'a aucune trace de la propriété. Un nouvel encapsuleur d'objet pour chaque opération d'objet sur une chaîne.
+Ainsi, sur la dernière ligne, `str` n'a aucune trace de la propriété. Un nouvel wrapper(conteneur) d'objet pour chaque opération d'objet sur une chaîne.
 
 Certains navigateurs peuvent toutefois décider de limiter davantage le programmeur et d'empêcher l'attribution de propriétés aux primitives. C'est pourquoi, dans la pratique, nous pouvons également voir les erreurs sur la ligne `(*)`. C'est cependant un peu plus éloigné de la spécification. 
 
