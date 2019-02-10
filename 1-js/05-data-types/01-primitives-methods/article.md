@@ -118,7 +118,6 @@ Une tentative d'accès à une propriété d'une telle valeur donnerait l'erreur 
 
 ```js run
 alert(null.test); // error
-````
 
 ## Sommaire
 
