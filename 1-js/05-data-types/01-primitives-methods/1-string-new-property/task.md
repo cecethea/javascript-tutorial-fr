@@ -2,7 +2,7 @@ importance: 5
 
 ---
 
-# Can I add a string property?
+# Puis-je ajouter une chaîne comme propriété ?
 
 
 Considérons le code suivant:
