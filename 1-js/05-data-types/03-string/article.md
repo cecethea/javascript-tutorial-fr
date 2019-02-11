@@ -1,14 +1,14 @@
 # Strings
 
-In JavaScript, the textual data is stored as strings. There is no separate type for a single character.
+En JavaScript, les données de type texte sont stockées sous forme de chaînes de caractères. Il n'y a pas de type séparé pour un seul caractère.
 
-The internal format for strings is always [UTF-16](https://en.wikipedia.org/wiki/UTF-16), it is not tied to the page encoding.
+Le format interne des chaînes de caractères est toujours [UTF-16](https://en.wikipedia.org/wiki/UTF-16), il n'est pas lié au codage de la page.
 
 ## Quotes
 
-Let's recall the kinds of quotes.
+Rappelons les types de quotes.
 
-Strings can be enclosed within either single quotes, double quotes or backticks:
+Les chaînes de caractères peuvent être placées entre guillemets simples, doubles ou backticks :
 
 ```js
 let single = 'single-quoted';
@@ -17,7 +17,7 @@ let double = "double-quoted";
 let backticks = `backticks`;
 ```
 
-Single and double quotes are essentially the same. Backticks, however, allow us to embed any expression into the string, including function calls:
+Les guillemets simples et doubles sont essentiellement les mêmes. Les backticks nous permettent toutefois d’incorporer n’importe quelle expression dans la chaîne de caractères, y compris les appels de fonction :
 
 ```js run
 function sum(a, b) {
@@ -27,7 +27,7 @@ function sum(a, b) {
 alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
 ```
 
-Another advantage of using backticks is that they allow a string to span multiple lines:
+L’utilisation des backticks présente également l’avantage de permettre à une chaîne de caractères de couvrir plusieurs lignes :
 
 ```js run
 let guestList = `Guests:
@@ -39,80 +39,80 @@ let guestList = `Guests:
 alert(guestList); // a list of guests, multiple lines
 ```
 
-If we try to use single or double quotes in the same way, there will be an error:
+Si nous essayons d'utiliser des guillemets simples ou doubles de la même manière, il y aura une erreur :
 ```js run
 let guestList = "Guests:  // Error: Unexpected token ILLEGAL
   * John";
 ```
 
-Single and double quotes come from ancient times of language creation when the need for multiline strings was not taken into account. Backticks appeared much later and thus are more versatile.
+Les guillemets simples et doubles proviennent d'anciens temps de la création linguistique lorsque la nécessité de chaînes multilignes n'était pas prise en compte. Les backticks sont apparus beaucoup plus tard et sont donc plus polyvalents.
 
-Backticks also allow us to specify a "template function" before the first backtick. The syntax is: <code>func&#96;string&#96;</code>. The function `func` is called automatically, receives the string and embedded expressions and can process them. You can read more about it in the [docs](mdn:/JavaScript/Reference/Template_literals#Tagged_template_literals). This is called "tagged templates". This feature makes it easier to wrap strings into custom templating or other functionality, but it is rarely used.
+Les Backticks nous permettent également de spécifier un "modèle de fonction" avant le premier backtick. La syntaxe est la suivante : <code>func&#96;string&#96;</code>. La fonction `func` est appelée automatiquement, reçoit la chaîne de caractères et les expressions incorporées et peut les traiter. Vous pouvez en savoir plus à ce sujet dans la [doc](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits#Gabarits_%C3%A9tiquet%C3%A9s_2). Cela s'appelle des "tagged templates" (Gabarits étiquetés). Cette fonctionnalité facilite l'intégration de chaînes de caractères dans des modèles personnalisés ou d'autres fonctionnalités, mais elle est rarement utilisée.
 
 
-## Special characters
+## Caractères spéciaux
 
-It is still possible to create multiline strings with single quotes by using a so-called "newline character", written as `\n`, which denotes a line break:
+Il est encore possible de créer des chaînes de caractères multilignes avec des guillemets simples en utilisant un "caractère de nouvelle ligne", écrit comme ceci `\n`, qui spécifie un saut de ligne :
 
 ```js run
 let guestList = "Guests:\n * John\n * Pete\n * Mary";
 
-alert(guestList); // a multiline list of guests
+alert(guestList); // une liste d'invités multiligne
 ```
 
-For example, these two lines describe the same:
+Par exemple, ces deux lignes décrivent la même chose :
 
 ```js run
-alert( "Hello\nWorld" ); // two lines using a "newline symbol"
+alert( "Hello\nWorld" ); // deux lignes utilisant un "symbole de nouvelle ligne"
 
-// two lines using a normal newline and backticks
+// deux lignes utilisant une nouvelle ligne normale via les backticks 
 alert( `Hello
 World` );
 ```
 
-There are other, less common "special" characters as well. Here's the list:
+Il existe également d'autres caractères "spéciaux" moins courants. Voici [la liste](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String#%C3%89chappement_des_caract%C3%A8res) :
 
-| Character | Description |
-|-----------|-------------|
-|`\b`|Backspace|
-|`\f`|Form feed|
-|`\n`|New line|
-|`\r`|Carriage return|
-|`\t`|Tab|
-|`\uNNNN`|A unicode symbol with the hex code `NNNN`, for instance `\u00A9` -- is a unicode for the copyright symbol `©`. It must be exactly 4 hex digits. |
-|`\u{NNNNNNNN}`|Some rare characters are encoded with two unicode symbols, taking up to 4 bytes. This long unicode requires braces around it.|
+| Caractères     | Description                                                                                                                                                                   |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `\b`           | Retour arrière                                                                                                                                                                |
+| `\f`           | Saut de page (form feed)                                                                                                                                                      |
+| `\n`           | Nouvelle ligne                                                                                                                                                                |
+| `\r`           | Retour chariot                                                                                                                                                                |
+| `\t`           | Tabulation                                                                                                                                                                    |
+| `\uNNNN`       | Un symbole Unicode avec le code hexadécimal `NNNN`, par exemple `\u00A9` -- est un unicode pour le symbole de copyright `©`. Ce doit être exactement 4 chiffres hexadécimaux. |
+| `\u{NNNNNNNN}` | Certains caractères rares sont codés avec deux symboles Unicode, prenant jusqu'à 4 octets. Ce long unicode nécessite des accolades autour de lui.                             |
 
-Examples with unicode:
+Exemples avec unicode :
 
 ```js run
 alert( "\u00A9" ); // ©
-alert( "\u{20331}" ); // 佫, a rare chinese hieroglyph (long unicode)
-alert( "\u{1F60D}" ); // 😍, a smiling face symbol (another long unicode)
+alert( "\u{20331}" ); // 佫, un rare hiéroglyphe chinois (long unicode)
+alert( "\u{1F60D}" ); // 😍, un symbole de visage souriant (un autre long unicode)
 ```
 
-All special characters start with a backslash character `\`. It is also called an "escape character".
+Tous les caractères spéciaux commencent par un backslash (barre oblique inversée) `\`. On l'appelle aussi "caractère d'échappement".
 
-We would also use it if we want to insert a quote into the string.
+Nous l'utilisons également si nous voulons insérer un quote dans la chaîne de caractères.
 
-For instance:
+Par exemple :
 
 ```js run
 alert( 'I*!*\'*/!*m the Walrus!' ); // *!*I'm*/!* the Walrus!
 ```
 
-As you can see, we have to prepend the inner quote by the backslash `\'`, because otherwise it would indicate the string end.
+Comme vous pouvez le constater, nous devons précéder le simple quote intérieure du backslash `\'`, sinon, cela indiquerait la fin de la chaîne de caractères.
 
-Of course, that refers only to the quotes that are same as the enclosing ones. So, as a more elegant solution, we could switch to double quotes or backticks instead:
+Bien sûr, cela ne concerne que les quotes identiques à ceux qui les entourent. Donc, comme solution plus élégante, nous pourrions utiliser des guillemets ou des backticks :
 
 ```js run
 alert( `I'm the Walrus!` ); // I'm the Walrus!
 ```
 
-Note that the backslash `\` serves for the correct reading of the string by JavaScript, then disappears. The in-memory string has no `\`. You can clearly see that in `alert` from the examples above.
+Veuillez noter que le backslash `\` sert à la lecture correcte de la chaîne de caractères par JavaScript, puis disparaît. La chaîne de caractères en mémoire ne contient pas `\`. Vous pouvez le voir clairement dans l'`alert` à partir des exemples ci-dessus.
 
-But what if we need to show an actual backslash `\` within the string?
+Mais que faire si nous devons afficher un réel backslash `\` à l'intérieur de la chaine de caractères ?
 
-That's possible, but we need to double it like `\\`:
+C’est possible, mais nous devons le doubler comme ceci `\\` :
 
 ```js run
 alert( `The backslash: \\` ); // The backslash: \
