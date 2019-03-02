@@ -122,8 +122,6 @@ La syntaxe est la suivante:
 arr.slice(start, end)
 ```
 
-Par exemple:
-
 Il retourne un nouveau tableau dans lequel il copie tous les éléments index qui commencent de `"start"` à `end"` (sans compter `"end"`). Le début et la fin peuvent être négatifs, dans ce cas, la position de la fin du tableau est assumé.
 
 En fait, ça fonctionne comme str.slice, mais crée des sous-tableaux au lieu de sous-chaînes.
