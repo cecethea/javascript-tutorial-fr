@@ -531,7 +531,6 @@ let result = arr.reduce((sum, current) => sum + current, 0);
 alert(result); // 15
 ```
 
-Here we used the most common variant of `reduce` which uses only 2 arguments.
 Ici, nous avons utilisé la variante la plus commune de `reduce` qui utilise seulement 2 arguments.
 
 Voyons en détails ce qu'il se passe.
