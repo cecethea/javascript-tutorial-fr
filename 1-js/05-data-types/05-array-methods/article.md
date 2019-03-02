@@ -1,7 +1,5 @@
 # Méthodes de tableau
 
-Arrays provide a lot of methods. To make things easier, in this chapter they are split into groups.
-
 Les tableaux viennent avec beaucoup de méthodes. Pour faciliter les choses, dans ce chapitre, ils ont étaient divisés en groupes.
 
 ## Ajouter/Supprimer des éléments
