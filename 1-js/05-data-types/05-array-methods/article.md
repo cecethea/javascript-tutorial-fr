@@ -44,8 +44,6 @@ La syntaxe est la suivante:
 arr.splice(index[, nombreDeSuppression, elem1, ..., elemN])
 ```
 
-It starts from the position `index`: removes `deleteCount` elements and then inserts `elem1, ..., elemN` at their place. Returns the array of removed elements.
-
 Il commence à partir de la position `index`: supprime les éléments `nombreDeSuppression` puis insère elem1, ..., elemN à leur place. Il renvoie ensuite le tableau des éléments supprimés.
 
 Cette méthode est facile à comprendre avec des exemples.
@@ -124,7 +122,7 @@ La syntaxe est la suivante:
 arr.slice(start, end)
 ```
 
-For instance:
+Par exemple:
 
 Il retourne un nouveau tableau dans lequel il copie tous les éléments index qui commencent de `"start"` à `end"` (sans compter `"end"`). Le début et la fin peuvent être négatifs, dans ce cas, la position de la fin du tableau est assumé.
 
@@ -262,7 +260,6 @@ La fonction est appelée de manière répétitive pour chaque élément du table
 
 S'il renvoie `true`, la recherche est arrêtée, l'`item` est renvoyé. Si rien n'est trouvé, `undefined` est renvoyé.
 
-For example, we have an array of users, each with the fields `id` and `name`. Let's find the one with `id == 1`:
 Par exemple, nous avons un tableau d’utilisateurs, chacun avec les champs `id` et `name`. Trouvons le premier avec l'`id == 1`:
 
 ```js run
@@ -277,9 +274,6 @@ let user = users.find(item => item.id == 1);
 alert(user.name); // John
 ```
 
-In real life arrays of objects is a common thing, so the `find` method is very useful.
-
-Note that in the example we provide to `find` a single-argument function `item => item.id == 1`. Other parameters of `find` are rarely used.
 Dans la vie réelle, les tableaux d'objets sont une chose courante, la méthode `find` est donc très utile.
 
 Notez que dans l'exemple, nous fournissons à `find` une fonction à argument unique, `item => item.id == 1`. Les autres paramètres de `find` sont rarement utilisés.
@@ -376,7 +370,7 @@ function compare(a, b) {
 }
 ```
 
-Par exemple
+Par exemple:
 
 ```js run
 function compareNumeric(a, b) {
@@ -574,13 +568,6 @@ let result = arr.reduce((sum, current) => sum + current);
 alert( result ); // 15
 ```
 
-The result is the same. That's because if there's no initial, then `reduce` takes the first element of the array as the initial value and starts the iteration from the 2nd element.
-
-The calculation table is the same as above, minus the first row.
-
-But such use requires an extreme care. If the array is empty, then `reduce` call without initial value gives an error.
-
-Here's an example:
 Le résultat est le même. En effet, s'il n'y a pas d'initiale, alors `reduce` prend le premier élément du tableau comme valeur initiale et lance l'itération à partir du deuxième élément.
 
 Le tableau de calcul est le même que celui ci-dessus, moins la première ligne.
@@ -592,8 +579,6 @@ Voici un exemple:
 ```js run
 let arr = [];
 
-// Error: Reduce of empty array with no initial value
-// if the initial value existed, reduce would return it for the empty arr.
 // Erreur: Réduction du tableau vide sans valeur initiale
 // si la valeur initiale existait, reduction le renverrait pour l'arr vide.
 arr.reduce((sum, current) => sum + current);
@@ -695,7 +680,6 @@ let youngerUsers = users.filter(user.younger, user);
 alert(youngerUsers.length); // 2
 ```
 
-In the call above, we use `user.younger` as a filter and also provide `user` as the context for it. If we didn't provide the context, `users.filter(user.younger)` would call `user.younger` as a standalone function, with `this=undefined`. That would mean an instant error.
 Dans l'appel ci-dessus, nous utilisons `user.younger` en tant que filtre et nous fournissons également l'`user` en tant que contexte. Si nous ne fournissions pas le contexte, `users.filter(user.younger)` appellerait `user.younger` en tant que fonction autonome, avec `this=undefined`. Il en résulterait une erreur instantanée.
 
 ## Résumé
