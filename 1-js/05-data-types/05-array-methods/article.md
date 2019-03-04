@@ -13,7 +13,7 @@ Nous connaissons déjà des méthodes qui ajoutent et suppriment des éléments 
 
 En voici quelques autres.
 
-### splice
+### splice ()
 
 Comment supprimer un élément du tableau?
 
@@ -386,7 +386,7 @@ arr.sort(compareNumeric);
 alert(arr);  // *!*1, 2, 15*/!*
 ```
 
-Maintenant, cela fonctionne comme nous l'avons prévu.
+Maintenant, ça fonctionne comme nous l'avons prévu.
 
 Laissons de côté et regardons ce qui se passe. L'`arr` peut être un tableau de n'importe quoi, non? Il peut contenir des nombres, des chaînes, des éléments HTML ou autre. Nous avons donc un ensemble de quelque chose. Pour le trier, nous avons besoin d’une fonction de classement qui sache comparer ses éléments. La valeur par défaut est un ordre de chaîne.
 
@@ -418,7 +418,7 @@ alert(arr);  // *!*1, 2, 15*/!*
 ````
 
 ````smart header="Arrow functions for the best"
-Remember [arrow functions](info:function-expressions-arrows#arrow-functions)? We can use them here for neater sorting:
+Rappelez-vous des [fonctions de flèche](info:function-expressions-arrows#arrow-functions)? Nous pouvons les utiliser ici pour un tri plus net:
 
 ```js
 arr.sort( (a, b) => a - b );
@@ -587,7 +587,7 @@ Il est donc conseillé de toujours spécifier la valeur initiale.
 La méthode [arr.reduceRight](mdn:js/Array/reduceRight) fait la même chose, mais va de droite à gauche.
 
 
-## Iterate: forEach
+## Répéter: forEach
 
 La méthode [arr.forEach](mdn:js/Array/forEach) permet d'exécuter une fonction pour chaque élément du tableau.
 
@@ -695,8 +695,7 @@ Un cheatsheet des méthodes de tableau:
 - Pour rechercher parmi des éléments:
   - `indexOf/lastIndexOf(item, pos)` -- cherche l'`item` à partir de `pos`, retourne l'index `-1` s'il n'est pas trouvé.
   - `includes(value)` -- retourne `true` si le tableau a une `value`, sinon `false`.
-  - `find/filter(func)` -- filter elements through the function, return first/all values that make it return `true`.
-  filtre les éléments dans la fonction, retourne la première/toutes les valeurs qui retourne `true`.
+  - `find/filter(func)` -- filtre les éléments dans la fonction, retourne la première/toutes les valeurs qui retourne `true`.
   - `findIndex` similaire `find`, mais renvoie l'index au lieu d'une valeur.
 
 - Pour transformer le tableau:
