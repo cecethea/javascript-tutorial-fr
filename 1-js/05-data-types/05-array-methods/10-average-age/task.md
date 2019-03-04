@@ -4,7 +4,6 @@ importance: 4
 
 # Obtenir l'âge moyen
 
-Write the function `getAverageAge(users)` that gets an array of objects with property `age` and gets the average.
 Ecrivez la fonction `getAverageAge(users)` qui obtient un tableau d'objets avec la propriété `age` et qui ensuite obtient la moyenne.
 
 La formule pour la moyenne est `(age1 + age2 + ... + ageN) / N`.
