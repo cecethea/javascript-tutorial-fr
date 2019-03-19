@@ -8,7 +8,7 @@ Ecrivez la fonction `camelize(str)` qui change les mots séparés par des tirets
 
 Donc: supprime tous les tirets  et met en majuscule la première lettre de chaque mot à partir du deuxième mot.
 
-Examples:
+Exemples:
 
 ```js
 camelize("background-color") == 'backgroundColor';

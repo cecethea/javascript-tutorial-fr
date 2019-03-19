@@ -22,7 +22,6 @@ Pour les objets simples, les méthodes suivantes sont disponibles:
 - [Object.values(obj)](mdn:js/Object/values) -- retourne un tableau de valeurs.
 - [Object.entries(obj)](mdn:js/Object/entries) -- retourne un tableau de paires `[clé, valeur]`.
 
-...But please note the distinctions (compared to map for example):
 ...Mais s'il vous plaît noter les différences (par rapport à map par exemple):
 
 |             | Map              | Object       |
@@ -49,7 +48,6 @@ let user = {
 - `Object.values(user) = ["John", 30]`
 - `Object.entries(user) = [ ["name","John"], ["age",30] ]`
 
-Here's an example of using `Object.values` to loop over property values:
 Voici un exemple d'utilisation d'`Object.values` pour boucler les valeurs de propriété:
 
 ```js run
@@ -65,10 +63,6 @@ for (let value of Object.values(user)) {
 ```
 
 ## Object.keys/values/entries ignorer les propriétés symboliques
-
-Just like a `for..in` loop, these methods ignore properties that use `Symbol(...)` as keys.
-
-Usually that's convenient. But if we want symbolic keys too, then there's a separate method [Object.getOwnPropertySymbols](mdn:js/Object/getOwnPropertySymbols) that returns an array of only symbolic keys. Also, the method [Reflect.ownKeys(obj)](mdn:js/Reflect/ownKeys) returns *all* keys.
 
 Tout comme une boucle `for..in`, ces méthodes ignorent les propriétés qui utilisent `Symbol(...)` comme clés.
 

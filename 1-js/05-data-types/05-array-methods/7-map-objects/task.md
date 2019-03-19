@@ -8,7 +8,7 @@ Vous avez un tableau d'objets `user`, chacun ayant` name`, `surname` et` id`.
 
 Ecrivez le code pour créer un autre tableau à partir de celui-ci, avec les objets `id` et `fullName`, où `fullName` est généré à partir de `name` et `surname`.
 
-For instance:
+Par exemple:
 
 ```js no-beautify
 let john = { name: "John", surname: "Smith", id: 1 };
