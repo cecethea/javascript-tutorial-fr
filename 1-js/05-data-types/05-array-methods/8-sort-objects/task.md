@@ -2,11 +2,11 @@ importance: 5
 
 ---
 
-# Sort objects
+# Trier les objets
 
-Write the function `sortByName(users)` that gets an array of objects with property `name` and sorts it.
+Ecrivez la fonction `sortByName(users)` qui obtient un tableau d'objets avec la propriété `name` et le trie.
 
-For instance:
+Par exemple:
 
 ```js no-beautify
 let john = { name: "John", age: 25 };
@@ -17,7 +17,7 @@ let arr = [ john, pete, mary ];
 
 sortByName(arr);
 
-// now: [john, mary, pete]
+// maintenant: [john, mary, pete]
 alert(arr[1].name); // Mary
 ```
 
